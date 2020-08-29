@@ -82,6 +82,7 @@ function osdrx_function {
         ps -ef | nice grep "rx -p 1" | nice grep -v grep | awk '{print $2}' | xargs kill -9
         ps -ef | nice grep "ftee /var/run/openhd/telemetryfifo" | nice grep -v grep | awk '{print $2}' | xargs kill -9
         ps -ef | nice grep "cat /var/run/openhd/telemetryfifo3" | nice grep -v grep | awk '{print $2}' | xargs kill -9
+        ps -ef | nice grep "cat /var/run/openhd/telemetryfifo6" | nice grep -v grep | awk '{print $2}' | xargs kill -9
         sleep 1
     done
 }
