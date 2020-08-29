@@ -693,6 +693,13 @@ function get_telemetry_settings {
         TELEMETRY_UDP_PORT=5004
         TELEMETRY_TYPE=0
     fi
+    if [ "$TELEMETRY_TRANSMISSION" == "external" ]; then
+    if [ "$EXTERNAL_TELEMETRY_SERIALPORT_GROUND" == "/dev/ttytbs_crossfire_B4E62D2FEFFE" ]; then
+    if [ ! -e $EXTERNAL_TELEMETRY_SERIALPORT_GROUND ]; then
+    nice socat -d -d pty,link=/dev/ttytbs_crossfire_B4E62D2FEFFE,raw,echo=0 udp4-recv:14560 > /dev/null 2>&1 &
+    fi
+    fi
+    fi
 }
 
 
