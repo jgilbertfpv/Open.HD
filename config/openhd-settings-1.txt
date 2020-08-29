@@ -165,7 +165,7 @@ WIFI_HOTSPOT=auto
 # Set to "g" for 2.4ghz , "a" for 5.8ghz, 
 # Channels 1-11 for 2.4Ghz, 
 # Channels 36,40,44,48,52,56,60,64 for 5Ghz
-HOTSPOT_BAND=a
+HOTSPOT_BAND=g
 HOTSPOT_CHANNEL=36
 # Set to number of seconds you wany hotspot to shutdown. Default is "0", run forever
 HOTSPOT_TIMEOUT=0
@@ -232,7 +232,7 @@ PrimaryCardMAC=0
 # external = use external means as telemetry up/downlink (LRS or 3DR dongles)
 # if set to external, set serialport to which LRS or 3DR dongle is connected
 # both on ground and air pi
-TELEMETRY_TRANSMISSION=wbc
+TELEMETRY_TRANSMISSION=external
 
 # >>>>>>>>>>[TELEMETRY UPLINK]--
 # Set to "disabled" or "mavlink" for Mavlink (QGC, Missionplanner, etc.)
@@ -250,12 +250,12 @@ FC_TELEMETRY_SERIALPORT=/dev/serial0
 FC_TELEMETRY_BAUDRATE=115200
 
 # >>>>>>>>>>[EXTERNAL DEVICE SERIAL PORT BAUDRATE]--Serial port settings if using TELEMETRY_TRANSMISSION=external
-EXTERNAL_TELEMETRY_SERIALPORT_GROUND=/dev/serial0
+EXTERNAL_TELEMETRY_SERIALPORT_GROUND=/dev/ttytbs_crossfire_B4E62D2FEFFE
 EXTERNAL_TELEMETRY_SERIALPORT_GROUND_BAUDRATE=57600
 
 # >>>>>>>>>>[GROUND SERIAL PORT OUT ENABLE?]--Set to "Y" to enable output of telemetry to serialport on ground Pi
 # (for antenna tracker etc.)
-ENABLE_SERIAL_TELEMETRY_OUTPUT=N
+ENABLE_SERIAL_TELEMETRY_OUTPUT=Y
 
 # >>>>>>>>>>[GROUND SERIAL PORT/BAUDRATE OUT]-- 
 # Used for ground Pi telemetry output if TELEMETRY_OUTPUT=Y
